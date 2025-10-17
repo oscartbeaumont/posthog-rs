@@ -18,8 +18,8 @@ pub use async_client::Client;
 #[derive(Builder)]
 pub struct ClientOptions {
     #[builder(default = "API_ENDPOINT.to_string()")]
-    api_endpoint: String,
-    api_key: String,
+    pub api_endpoint: String,
+    pub api_key: String,
 
     #[builder(default = "30")]
     request_timeout_seconds: u64,
